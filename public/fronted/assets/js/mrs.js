@@ -40,6 +40,12 @@ $(document).off('submit', '#enquiryForm').on('submit', '#enquiryForm', function 
         }
     });
 });
+$(document).ready(function () {
+    $(".gallery-pills .nav-link").click(function () {
+        $(".gallery-pills .nav-link").removeClass("active");
+        $(this).addClass("active");
+    });
+});
 
 function showToast(type, message) {
     var toastClass = '';
