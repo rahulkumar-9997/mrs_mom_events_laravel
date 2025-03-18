@@ -215,7 +215,7 @@
 }
 .event3-section-area .gallery-button ul li{
     display: inline-block;
-    margin: 0px 15px;
+    margin: 0 5px 5px;
 
 }
 .inner-page-header-bg {
@@ -252,7 +252,7 @@
     /* display: inline-block; */
     transition: all 0.4s;
     /* text-align: start; */
-    padding: 12px 25px 12px;
+    padding: 10px 12px 10px;
     border-radius: 8px;
     background: #F5F5F5;
 }
