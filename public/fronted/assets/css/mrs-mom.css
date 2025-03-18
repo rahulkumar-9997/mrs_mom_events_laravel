@@ -649,6 +649,7 @@
     font-style: normal;
     font-weight: var(--ztc-weight-medium);
     line-height: 26px;
+    text-align: justify;
 }
 .padding-sp-b{
     padding-bottom: 20px;
@@ -772,7 +773,7 @@
         top: 59%;
     }
     .about-header-area p {
-        text-align: unset;
+        text-align: justify;
     }
     .bg-mg {
         position: relative;
@@ -781,7 +782,7 @@
         object-position: top;
     }
     .about-us-home p{
-        text-align: unset;
+        text-align: justify;
     }
     .blog-sectopn-home.sp2{
         padding: 0px 0 20px;
@@ -794,6 +795,9 @@
     }
     .inner-page-header.breadcrub-header {
         padding: 100px 0px 16px;
+    }
+    .inner-page-header-bg.breadcrub-header {
+        background-image: linear-gradient(rgb(159 8 128) 59%, rgb(208 3 118) 89%);
     }
     .breadcrub-header .heading1 h1{
         font-size: var(--ztc-font-size-font-s26);
@@ -819,7 +823,8 @@
     }
     .cta1-section-area .cta1-main-boxarea .timer-btn-area .timer .time-box{
         margin-bottom: 10px;
-        margin-right: 10px!important;
+        margin-right: 5px !important;
+        margin-left: 5px;
     }
     .cta1-section-area .cta1-main-boxarea .timer-btn-area .timer .time-value,
     .hero1-section-area .timer .time-value{

@@ -14,8 +14,8 @@
 <script src="{{asset('fronted/assets/js/vendor/waypoints.js')}}"></script>
 <script src="{{asset('fronted/assets/js/vendor/slick-slider.js')}}"></script>
 <script src="{{asset('fronted/assets/js/vendor/circle-progress.js')}}"></script>
-<script src="{{asset('fronted/assets/js/main.js')}}"></script>
+<script src="{{asset('fronted/assets/js/main.js')}}?v={{ time() }}"></script>
 <script src="{{asset('fronted/assets/js/jquery.fancybox.js')}}"></script>
 <script src="{{asset('fronted/assets/js/isotope.pkgd.min.js')}}"></script>
-<script src="{{asset('fronted/assets/js/mrs.js')}}"></script>
+<script src="{{asset('fronted/assets/js/mrs.js')}}?v={{ time() }}"></script>
 @stack('scripts')

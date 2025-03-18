@@ -295,7 +295,7 @@
   // testimonial //
   $('.brand-slider-area').owlCarousel({
     loop: true,
-    margin: 30,
+    margin: 10,
     nav: false,
     dots: false,
     items: 10,
@@ -305,7 +305,7 @@
     responsiveClass: true,
     responsive: {
       0: {
-        items: 1,
+        items: 2,
         center: false,
       },
       600: {
