@@ -27,11 +27,13 @@ class MediaController extends Controller
         
         $this->validate($request, [
             'youtube_link' => $isYouTube ? 'required|url' : 'nullable',
-            'image_file' => !$isYouTube ? 'required' : 'nullable',
+            'image_file' => !$isYouTube ? 'required|array' : 'nullable',
+            'image_file.*' => 'mimes:jpeg,png,jpg,webp',
         ], [
             'youtube_link.required' => 'The YouTube link is required.',
             'youtube_link.url' => 'Please enter a valid YouTube URL.',
             'image_file.required' => 'Please upload at least one image.',
+            'image_file.*.mimes' => 'Only JPEG, PNG, JPG, and WebP formats are allowed.',
         ]);
         
         DB::beginTransaction();
@@ -108,12 +110,15 @@ class MediaController extends Controller
         $isYouTube = $request->has('youtube_link_checkbox');
         $this->validate($request, [
             'youtube_link' => $isYouTube ? 'required|url' : 'nullable',
-            'image_file' => !$isYouTube ? 'required' : 'nullable',
+            'image_file' => !$isYouTube ? 'required|array' : 'nullable',
+            'image_file.*' => 'mimes:jpeg,png,jpg,webp', 
         ], [
             'youtube_link.required' => 'The YouTube link is required.',
             'youtube_link.url' => 'Please enter a valid YouTube URL.',
             'image_file.required' => 'Please upload at least one image.',
+            'image_file.*.mimes' => 'Only JPEG, PNG, JPG, and WebP formats are allowed.',
         ]);
+        
 
         DB::beginTransaction();
         try {

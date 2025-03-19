@@ -59,7 +59,7 @@
                                 <div class="media-multiple-img">
                                     <div class="row grid-services">
                                         @foreach ($data['media_image_list'] as $media)
-                                            <div class="col-lg-3 col-md-6 px-1 aos-init aos-animate" data-aos="zoom-in" data-aos-duration="800">
+                                            <div class="col-lg-3 col-md-6 px-1">
                                                 <figure>
                                                     <a class="lightbox" title="{{ $media->title }}" data-fancybox="media-img" data-caption="{{ $media->title }}" href="{{ asset('storage/media-img/' . $media->media_image) }}">
                                                         <img src="{{ asset('storage/media-img/' . $media->media_image) }}" alt="{{ $media->title }}" loading="lazy">
@@ -69,6 +69,40 @@
                                         @endforeach
                                     </div>
                                 </div>
+                                <div class="space30"></div>
+                                @if ($data['media_image_list']->lastPage() > 1)
+                                    <div class="pagination-area">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class="page-item {{ ($data['media_image_list']->currentPage() == 1) ? 'disabled' : '' }}">
+                                                    <a class="page-link" href="{{ $data['media_image_list']->previousPageUrl() }}" aria-label="Previous">
+                                                        <i class="fa-solid fa-angle-left"></i>
+                                                    </a>
+                                                </li>
+
+                                                <!-- Page Numbers -->
+                                                @for ($i = 1; $i <= $data['media_image_list']->lastPage(); $i++)
+                                                    @if ($i == 1 || $i == $data['media_image_list']->lastPage() || 
+                                                        ($i >= $data['media_image_list']->currentPage() - 1 && $i <= $data['media_image_list']->currentPage() + 1))
+                                                        <li class="page-item {{ ($data['media_image_list']->currentPage() == $i) ? 'active' : '' }}">
+                                                            <a class="page-link" href="{{ $data['media_image_list']->url($i) }}">{{ $i }}</a>
+                                                        </li>
+                                                    @elseif ($i == 2 || $i == $data['media_image_list']->lastPage() - 1)
+                                                        <li class="page-item"><a class="page-link">...</a></li>
+                                                    @endif
+                                                @endfor
+
+                                                <!-- Next Button -->
+                                                <li class="page-item {{ ($data['media_image_list']->currentPage() == $data['media_image_list']->lastPage()) ? 'disabled' : '' }}">
+                                                    <a class="page-link" href="{{ $data['media_image_list']->nextPageUrl() }}" aria-label="Next">
+                                                        <i class="fa-solid fa-angle-right"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                @endif
+
                             @endif
                         </div>
                     </div>

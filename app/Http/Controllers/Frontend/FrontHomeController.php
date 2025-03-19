@@ -62,7 +62,7 @@ class FrontHomeController extends Controller
     }
 
     public function mediaPage(){
-        $data['media_image_list'] = Media::where('is_image_or_youtube', 0)->orderBy('sort_order', 'asc')->get();
+        $data['media_image_list'] = Media::where('is_image_or_youtube', 0)->orderBy('sort_order', 'asc')->paginate(50);
         $data['media_youtube_list'] = Media::where('is_image_or_youtube', 1)->orderBy('sort_order', 'asc')->get(); 
 	    return view('frontend.pages.media', compact('data'));
     }

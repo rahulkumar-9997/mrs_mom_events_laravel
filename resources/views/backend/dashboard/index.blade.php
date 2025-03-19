@@ -34,7 +34,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                <!--<div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="r4_counter db_box">
                                         <i class='pull-left fa fa-star icon-md icon-rounded icon-purple'></i>
                                         <div class="stats">
@@ -42,7 +42,7 @@
                                             <span>Our Work</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="r4_counter db_box">
                                         <i class='pull-left fa fa-envelope-o icon-md icon-rounded icon-warning'></i>
@@ -52,7 +52,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 col-sm-6 col-xs-12">
+                                <!--<div class="col-md-3 col-sm-6 col-xs-12">
                                     <div class="r4_counter db_box">
                                         <i class='pull-left fa fa-heart icon-md icon-rounded icon-warning'></i>
                                         <div class="stats">
@@ -60,7 +60,7 @@
                                             <span>IBU Care</span>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div> 
                         </div>
                     </section>

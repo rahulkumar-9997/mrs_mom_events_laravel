@@ -12919,8 +12919,8 @@ Location:
   color: var(--ztc-text-text-2);
 }
 .pagination-area ul li a:hover {
-  background: var(--ztc-bg-bg-3);
-  color: var(--ztc-text-text-2);
+  background: #9f0880;
+  color: #ffffff;
 }
 
 /*============= OTHERS CSS AREA ENDS ===============*/
@@ -24241,6 +24241,12 @@ Location:
   line-height: 20px; /* 100% */
   display: inline-block;
   transition: all 0.4s;
+}
+.pagination-area .active>.page-link, .pagination-area .page-link.active {
+  z-index: 3;
+  color: #ffffff;
+  background-color: #9f0880;
+  border-color: #9f0880;
 }
 
 /*============= MEMORY CSS AREA ===============*//*# sourceMappingURL=main.css.map */
