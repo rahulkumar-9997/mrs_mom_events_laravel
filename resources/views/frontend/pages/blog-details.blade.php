@@ -22,32 +22,35 @@
     </div>
 </div>
 <!--===== BLOG AREA STARTS =======-->
-<div class="blog-details-section sp8">
+<div class="blog-details-section sp1">
     <div class="container">
         <div class="row de-flex justify-content-md-center">
             <div class="col-lg-8">
                 <div class="blog-deatils-content heading2">
-                    <div class="img1">
+                    <!--<div class="img1">
                         <a class="lightbox" title="{{ $blog->title }}" data-fancybox="intro-img" data-caption="" href="{{ asset('storage/blog-img/' . $blog->intro_image) }}">
                             <img src="{{ asset('storage/blog-img/' . $blog->intro_image) }}" alt="{{ $blog->title }}" loading="lazy"/>
                         </a>
-                    </div>
+                    </div>-->
                     @if($blog->blog_intro_head)
                         <div class="space18"></div>
                         <h1>{!! $blog->blog_intro_head !!}</h1>
                     @endif
                     <div class="space16"></div>
                     <div class="blog-details">
+                        @if($blog->intro_description)
+                            <p>{{ $blog->intro_description }}</p>
+                        @endif
                         {!! $blog->blog_description !!}
                     </div>
-                    <div class="space48"></div>
+                    <div class="space30"></div>
                     @if ($blog->images->isNotEmpty())
                         <div class="blog-img-area">
-                            <div class="row">
+                            <div class="row grid-services">
                                 @foreach ($blog->images as $image)
-                                    <div class="col-lg-6 col-md-6 mb10">
+                                    <div class="col-lg-4 col-md-4 mb10">
                                         <a class="lightbox" title="{{ $blog->title }}" data-fancybox="images-1" data-caption="" href="{{ asset('storage/blog-img/' . $image->blog_image) }}">
-                                            <div class="img1 image-anime">
+                                            <div class="img-old image-anime">
                                                 <img src="{{ asset('storage/blog-img/' . $image->blog_image) }}" alt="{{ $blog->title }}" loading="lazy"/>
                                             </div>
                                         </a>

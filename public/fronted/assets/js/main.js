@@ -655,21 +655,29 @@ function startCountdown(targetDate, daysId, hoursId, minutesId, secondsId) {
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    document.getElementById(daysId).innerHTML = days + " <span><br>DAYS</span>";
-    document.getElementById(hoursId).innerHTML = hours + " <span><br>Hours</span>";
-    document.getElementById(minutesId).innerHTML = minutes + " <span><br>Minutes</span>";
-    document.getElementById(secondsId).innerHTML = seconds + " <span><br>Seconds</span>";
+    // Get elements
+    var daysElem = document.getElementById(daysId);
+    var hoursElem = document.getElementById(hoursId);
+    var minutesElem = document.getElementById(minutesId);
+    var secondsElem = document.getElementById(secondsId);
+
+    // Only update elements if they exist
+    if (daysElem) daysElem.innerHTML = days + " <span><br>DAYS</span>";
+    if (hoursElem) hoursElem.innerHTML = hours + " <span><br>Hours</span>";
+    if (minutesElem) minutesElem.innerHTML = minutes + " <span><br>Minutes</span>";
+    if (secondsElem) secondsElem.innerHTML = seconds + " <span><br>Seconds</span>";
 
     if (distance < 0) {
       clearInterval(countdownFunction);
-      document.getElementById(daysId).innerHTML = "00";
-      document.getElementById(hoursId).innerHTML = "00";
-      document.getElementById(minutesId).innerHTML = "00";
-      document.getElementById(secondsId).innerHTML = "00";
+      if (daysElem) daysElem.innerHTML = "00";
+      if (hoursElem) hoursElem.innerHTML = "00";
+      if (minutesElem) minutesElem.innerHTML = "00";
+      if (secondsElem) secondsElem.innerHTML = "00";
       alert("Countdown Ended");
     }
   }, 1000);
 }
+
 
 // Set event date: December 1, 2025, at 10:00 AM
 var targetDate = new Date("December 1, 2025 10:00:00").getTime();

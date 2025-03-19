@@ -18,7 +18,7 @@ class FrontHomeController extends Controller
 {
     public function home(){
         $data['home_carousel'] = HomeCarousel::orderBy('id', 'DESC')->limit(20)->get();
-        $data['blog_list'] = Blog::select('id', 'title' ,'slug', 'blog_description', 'blog_intro_head', 'intro_description', 'intro_image')->inRandomOrder()->limit(3)->get();
+        $data['blog_list'] = Blog::select('id', 'title' ,'slug', 'blog_description', 'blog_intro_head', 'intro_description', 'intro_image')->orderBy('id', 'desc')->limit(3)->get();
 	    return view('frontend.index', compact('data'));
     }
     

@@ -24,7 +24,7 @@
 <!--===== BLOG AREA STARTS =======-->
 <div class="blog1-section-area sp2">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-md-center">
             @foreach($data['blog_list'] as $blog)
             <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-duration="{{ 800 + ($loop->index * 200) }}">
                 <div class="blog1-auhtor-boxarea">
@@ -40,7 +40,11 @@
                         <a href="{{ url('blog/'.$blog->slug) }}">
                             {{ $blog->title }}
                         </a>
-                        <div class="space20"></div>
+                        <div class="space10"></div>
+                        @if($blog->intro_description)
+                        <p>{{ \Illuminate\Support\Str::words($blog->intro_description, 25, '...') }}</p>
+                        @endif
+                        <div class="space10"></div>
                         <div class="btn-area1">
                             <a href="{{ url('blog/'.$blog->slug) }}" class="vl-btn2">Read More</a>
                         </div>

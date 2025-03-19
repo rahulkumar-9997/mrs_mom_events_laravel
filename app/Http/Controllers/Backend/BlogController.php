@@ -117,7 +117,7 @@ class BlogController extends Controller
                 'blog_intro_heading' => 'nullable',
                 'blog_post_date' =>'nullable',
                 'blog_intro_desc' => 'nullable',
-                'blog_intro_image' => 'required|image|mimes:jpeg,png,jpg,gif,webp|max:4096',
+                'blog_intro_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:4096',
                 'blog_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,webp|max:4096',
                 'blog_external_url' => 'nullable|url|required_if:blog_external_url_checkbox,1',
             ]);

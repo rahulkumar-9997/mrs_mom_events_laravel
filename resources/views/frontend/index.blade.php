@@ -178,7 +178,11 @@
                         <a href="{{ url('blog/'.$blog->slug) }}">
                             {{ $blog->title }}
                         </a>
-                        <div class="space20"></div>
+                        <div class="space10"></div>
+                        @if($blog->intro_description)
+                        <p>{{ \Illuminate\Support\Str::words($blog->intro_description, 30, '...') }}</p>
+                        @endif
+                        <div class="space10"></div>
                         <div class="btn-area1">
                             <a href="{{ url('blog/'.$blog->slug) }}" class="vl-btn2">Read More</a>
                         </div>
