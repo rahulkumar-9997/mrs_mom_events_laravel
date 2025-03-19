@@ -55,7 +55,7 @@
 					</div>
 					<div class="space16"></div>
 					<p>
-						India’s Only Health Pageant for to be Mother.Pregnant couples need 360 holistic care. The journey of pregnancy made beautiful.
+						India’s Only Health Pageant for to be Mother. Pregnant couples need 360 holistic care. The journey of pregnancy made beautiful.
 					</p>
 
 				</div>

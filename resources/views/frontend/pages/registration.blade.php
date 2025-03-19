@@ -9,7 +9,7 @@
             <div class="col-lg-4 m-auto">
                 <div class="heading1 text-center">
                     <!-- <h1>Registration Open</h1> -->
-                    <h1>Comming Soon</h1>
+                    <h1>Coming Soon</h1>
                     <!--<div class="breadcrub-a">
                         <a href="index.html">
                             Home
