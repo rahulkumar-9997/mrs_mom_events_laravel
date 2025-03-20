@@ -215,7 +215,7 @@
 }
 .event3-section-area .gallery-button ul li{
     display: inline-block;
-    margin: 0 5px 5px;
+    margin: 0 10px 5px;
 
 }
 .inner-page-header-bg {
@@ -699,7 +699,7 @@
 .bg-mg {
     background-image: url("../mrs-mom-img/director.webp");
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     position: absolute;
     right: 0;
@@ -719,6 +719,10 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+.home-dic-are{
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .video-play-btn {
     position: relative;
@@ -743,10 +747,38 @@
 .about1-section-area .about-header-area .about-auhtor-box:hover .icons img{
     filter: invert(100%);
 }
-
+.homepage1-body .header-area.homepage1.sticky .header-elements .site-logo a{
+    position: absolute;
+    /* left: 20px; */
+    bottom: -88px;
+    z-index: 999;
+}
+.homepage1-body .header-area.homepage1.sticky .header-elements .site-logo img{
+    width: 150px;
+    height: auto;
+    max-height: 148px;
+    transition: all 0.3s ease-in-out;
+    /* margin-top: -26px;*/
+}
+.homepage1-body .header-area.homepage1.sticky .header-elements .site-logo img{
+    /* border: 5px solid rgb(125, 185, 153);
+    border-image: linear-gradient(to bottom, rgba(108, 219, 141, 0) 39%, rgb(162 126 5) 25%, rgb(162 126 5) 100%, rgba(108, 219, 141, 0) 75%);
+    border-image-slice: 32.1%;
+    background: #232323 !important; */
+    background: #9f0880;
+    padding: 5px;
+    border-radius: 6px;
+}
+.homepage1-body .header-area.homepage1.sticky{
+    padding: 20px 0;
+}
 
 
 @media only screen and (max-width: 767px) {
+    .home-dic-are{
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
     .mobile-nav.mobile-nav1{
         max-height: 700px;
         overflow-y: scroll;

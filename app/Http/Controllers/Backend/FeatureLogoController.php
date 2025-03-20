@@ -41,7 +41,7 @@ class FeatureLogoController extends Controller
                         $constraint->aspectRatio();
                         $constraint->upsize();
                     })
-                    ->encode('webp', 70)
+                    ->encode('webp', 80)
                     ->save($destinationPath . '/' . $image_file_name);
                 $image_upload = FeatureLogo::create([
                     'img_file' => $image_file_name,

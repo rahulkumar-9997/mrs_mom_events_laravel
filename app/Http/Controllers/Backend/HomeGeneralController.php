@@ -38,7 +38,7 @@ class HomeGeneralController extends Controller
                         File::makeDirectory($destinationPath, 0755, true, true);
                     }
                     Image::make($image)
-                        ->resize(400, 200, function ($constraint) {
+                        ->resize(600, 400, function ($constraint) {
                             $constraint->aspectRatio();
                             $constraint->upsize();
                         })

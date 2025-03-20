@@ -96,16 +96,16 @@
 										+91 9503606049
 									</a>
 								</li>
-								<li>
+								<!--<li>
 									<a href="#">
 										<img src="{{asset('fronted/assets/img/icons/location1.svg')}}" alt="">
 										In 8 cities nearby Hyderabad
 									</a>
-								</li>
+								</li>-->
 								<li>
-									<a href="mailto:contact@drkshilpireddy.com">
+									<a href="mailto:drkshilpireddy@gmail.com">
 										<img src="{{asset('fronted/assets/img/icons/mail1.svg')}}" alt="">
-										contact@drkshilpireddy.com
+										drkshilpireddy@gmail.com
 									</a>
 								</li>
 

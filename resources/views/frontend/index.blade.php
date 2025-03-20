@@ -48,9 +48,12 @@
                     <h5 data-aos="fade-left" data-aos-duration="800">about event</h5>
                     <div class="space16"></div>
                     <h2 class="text-anime-style-3">India’s Only Health
-                        Pageant for to be Mother</h2>
+                        Pageant for to be Parents</h2>
                     <div class="space16"></div>
-                    <p data-aos="fade-left" data-aos-duration="900">The event focuses on various wellness and educational pursuits that can be included into pregnancy and infant care. These include teaching sustainability, undertaking cooking classes, fostering spiritual well-being, offering free dental and medical screenings, personality development workshops, and planning mom’s makeover. In order to secure the best outcomes for both mother and child, it highlights the significance of teaching parents about pregnancy and child care.</p>
+                    <!--<p data-aos="fade-left" data-aos-duration="900">The event focuses on various wellness and educational pursuits that can be included into pregnancy and infant care. These include teaching sustainability, undertaking cooking classes, fostering spiritual well-being, offering free dental and medical screenings, personality development workshops, and planning mom’s makeover. In order to secure the best outcomes for both mother and child, it highlights the significance of teaching parents about pregnancy and child care.</p>-->
+                    <p data-aos="fade-left" data-aos-duration="900">
+                        The event promotes wellness and education in pregnancy and infant care, covering sustainability, cooking, spiritual well-being, free health screenings, personality development, and mom’s makeover, emphasizing informed parenting for the best outcomes.
+                    </p>
                     <div class="space32"></div>
                     <div class="about-auhtor-box" data-aos="fade-left" data-aos-duration="1000">
                         <div class="icons">
@@ -90,21 +93,25 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
-                <div class="testimonial-header heading2">
-                    <h2 class="text-anime-style-3">Director of Mrs. Mom</h2>
-                </div>
-                <div class="space32"></div>
-                <div class="about-us-home">
-                    <p>
-                    As an obstetrician and gynaecologist practising <strong>since 20 years</strong> and as a woman I have seen and personally experienced transformation in my life happen when I changed towards sustainability, organic living, wellness based concepts and incorporating healthy living habits. I have decided to promote these core concepts for the good that they bring into the lives of pregnant women. These concepts help achieve healthy pregnancy as well as promote normal delivery and healthy future living. What is missing in the nuclear family concept we are incorporating and promoting the necessary training to fill this vacuum. My story was my game changer and it’s the way Mrs Mom was conceptualized. The effects of today’s lifestyle on human reproduction and its outcomes need serious reform.
-                    </p>
-                    <p>
-                    After 5 yrs of marriage and fertility issues for <strong>3 yrs</strong> culminating in <strong>IVF</strong> treatment at <strong>34 yrs</strong> of age, I conceived with twin pregnancy successfully but it landed into preterm labor at <strong>26 weeks</strong> and it’s roller coaster outcomes because of the impact of stress and lifestyle. As a family me and my husband Pramod then decided to changed our lifestyle to sustainable healthy lifestyle focusing on organic food and holistic concepts. The health benefits are enormous and very encouraging and I had a spontaneous pregnancy at <strong>38 years</strong> of age and a full term uneventful delivery. After the birth of my son Avi in 2016 I decided to bring this change into everyone’s life and teach healthy living to everyone planning pregnancy and pregnant couples. This is the story and the beginning of Mrs Mom – an event aimed at “change for good ”
-                    </p>
+                <div class="home-dic-are">
+                    <div class="testimonial-header heading2">
+                        <h2 class="text-anime-style-3">Director of Mrs. Mom</h2>
+                    </div>
+                    <div class="space20"></div>
+                    <div class="about-us-home">
+                        <p>
+                        As an obstetrician and gynecologist <strong>with 20 years of experience</strong>, and as a woman, I have personally witnessed the transformative power of sustainability, organic living, and wellness-focused habits. These principles not only support a healthy pregnancy but also promote normal delivery and long-term well-being. Recognizing the gaps in today’s nuclear family structure, we are incorporating essential training to bridge this void. My own journey was the inspiration behind Mrs Mom. 
+                        </p>
+                        <p>
+                        After struggling with fertility for three years, I conceived twins through <strong>IVF at 34,</strong> only to face preterm labor at <strong>26 weeks-an experience </strong>deeply impacted by stress and lifestyle. Determined to make a change, my husband, Pramod, and I embraced a sustainable, holistic lifestyle, focusing on organic food and mindful living. The results were profound—I conceived naturally at <strong>38 and had a full-term</strong>, healthy delivery. The birth of my son, Avi, in 2016 fueled my mission to bring this change to others, guiding aspiring and expecting parents toward a healthier future.  
+                        This is how Mrs Mom was born—an initiative dedicated to inspiring a “change for good.”
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="bg-mg">
+                    <!-- <img src="{{asset('fronted/assets/mrs-mom-img/director.webp')}}" alt="Director Image"> -->
                     <div class="video-play-btn">
                         <a href="https://www.youtube.com/watch?v=OCFdVMApDko" class="popup-youtube"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 20 24" fill="none">
                                 <path d="M19.5185 11.1463L1.52146 0.147702C1.36988 0.0550624 1.19634 0.0044781 1.01872 0.0011519C0.8411 -0.00217431 0.665798 0.041878 0.510849 0.128777C0.3559 0.215677 0.226898 0.342285 0.137113 0.495581C0.0473273 0.648876 8.00178e-08 0.823322 0 1.00098V22.9981C8.00178e-08 23.1758 0.0473273 23.3502 0.137113 23.5035C0.226898 23.6568 0.3559 23.7834 0.510849 23.8703C0.665798 23.9572 0.8411 24.0013 1.01872 23.998C1.19634 23.9946 1.36988 23.944 1.52146 23.8514L19.5185 12.8528C19.6647 12.7635 19.7855 12.6381 19.8693 12.4887C19.9531 12.3393 19.9971 12.1709 19.9971 11.9996C19.9971 11.8282 19.9531 11.6598 19.8693 11.5104C19.7855 11.361 19.6647 11.2356 19.5185 11.1463Z" fill="#1A1719" />

@@ -39,7 +39,7 @@
                             </div>
                             <div class="text">
                                 <h5>Our Email</h5>
-                                <a href="maito:contact@drkshilpireddy.com">contact@drkshilpireddy.com</a>
+                                <a href="maito:drkshilpireddy@gmail.com">drkshilpireddy@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -50,7 +50,7 @@
                             </div>
                             <div class="text">
                                 <h5>Call/Message</h5>
-                                <a href="tel:+919503606049">9503606049</a>
+                                <a href="tel:+919503606049">+91 9503606049</a>
                             </div>
                         </div>
                     </div>

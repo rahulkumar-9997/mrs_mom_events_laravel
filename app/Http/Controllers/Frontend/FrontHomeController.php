@@ -108,7 +108,7 @@ class FrontHomeController extends Controller
                 'mobile_number' => $request->input('phone_number'),
                 'message' => $request->input('message'),
             ];
-            Mail::to('rahulkumarmaurya464@gmail.com')->send(new EnquiryMail($data));
+            Mail::to('drkshilpireddy@gmail.com')->send(new EnquiryMail($data));
 
             return response()->json([
                 'status' => 'success',

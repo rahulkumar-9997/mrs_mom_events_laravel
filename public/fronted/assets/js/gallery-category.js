@@ -14,7 +14,9 @@ $(document).ready(function() {
             success: function(response) {
                 if (response.html) {
                     tabContent.html(response.html);
-                    setTimeout(initIsotopeOther, 500);
+                    $(".grid-services-gallery").imagesLoaded(function() {
+                    	initIsotopeOther();
+                	});
                 } else {
                     tabContent.html("");
                 }
@@ -32,13 +34,18 @@ function initIsotopeOther() {
     var $container = $(".grid-services-gallery");
 
     if ($container.length) {
-        $container.isotope({
-            itemSelector: ".col-lg-3",
-            layoutMode: "masonry",
-            percentPosition: true
+        $container.imagesLoaded(function() {
+            $container.isotope({
+                itemSelector: ".col-lg-3",
+                layoutMode: "masonry",
+                percentPosition: true
+            });
+
+            setTimeout(function () {
+                $container.isotope("layout");
+            }, 500);
         });
-        setTimeout(function () {
-            $container.isotope("layout");
-        }, 500);
     }
 }
+
+

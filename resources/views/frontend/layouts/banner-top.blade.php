@@ -18,7 +18,7 @@
 					</h1>
 					<div class="space16"></div>
 					<p data-aos="fade-left" data-aos-duration="900">
-					Celebrate motherhood with grace and confidence! Our beauty pageant for
+					Celebrate motherhood with grace and confidence! Our health pageant for
 					pregnant women honors the strength, 
 					elegance, and radiant beauty of moms-to-be.
 					</p>
@@ -44,7 +44,7 @@
 								referrerpolicy="strict-origin-when-cross-origin"
 								title="MRS MOM KHAMMAM 2024 #drkshilpireddy #mrsmom2024 #pregnantcouple #khammam"
 								
-								src="https://www.youtube.com/embed/NPJub9irDzw?autoplay=1&mute=1&controls=1&rel=0&playsinline=0&modestbranding=1&enablejsapi=1&origin=https://mrsmomevent.com"
+								src="https://www.youtube.com/embed/NPJub9irDzw?autoplay=1&mute=1&controls=1&rel=0&playsinline=0&modestbranding=1&enablejsapi=1&origin=https://mrsmomevent.com&loop=1&playlist=NPJub9irDzw"
 								id="widget2">
 							</iframe>
 
