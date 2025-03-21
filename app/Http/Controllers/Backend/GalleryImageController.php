@@ -213,4 +213,26 @@ class GalleryImageController extends Controller
 
         return response()->json(['success' => true, 'message'=>'Sort order updated successfully!']);
     }
+
+    public function rotate(Request $request, $id)
+    {
+        $image = GalleryImage::findOrFail($id);
+        $angle = $request->angle;
+        $imagePath = public_path('storage/gallery-img/' . $image->image_path);
+        if (file_exists($imagePath)) {
+            $img = Image::make($imagePath);
+            $img->rotate($angle);
+            $img->save($imagePath); 
+            return response()->json([
+                'success' => true,
+                'message' => 'Image rotated successfully',
+                'image_url' => asset('storage/gallery-img/' . $image->image_path),
+            ]);
+        } else {
+            return response()->json([
+                'success' => false,
+                'message' => 'Image not found',
+            ], 404);
+        }
+    }
 }

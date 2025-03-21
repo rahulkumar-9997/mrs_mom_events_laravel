@@ -121,6 +121,7 @@ Route::group(['middleware' => ['auth']], function() {
     Route::post('gallery-image/sort', [GalleryImageController::class, 'sort'])->name('gallery-image.sort');
     Route::post('/gallery-category/update-sort-order', [GalleryCategoryController::class, 'updateSortOrder'])
     ->name('gallery-category.updateSortOrder');
+    Route::post('gallery-image/rotate/{id}', [GalleryImageController::class, 'rotate'])->name('gallery-image.rotate');
 
     Route::get('home-slider', [HomeGeneralController::class, 'index'])->name('home-slider');
     Route::post('home-slider', [HomeGeneralController::class, 'store'])->name('home-slider.store');
