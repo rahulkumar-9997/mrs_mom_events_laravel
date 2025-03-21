@@ -5,7 +5,9 @@
             <div class="col-lg-3 col-md-6 px-1">
                 <figure>
                     <a class="lightbox" title="{{ $gallery_category->name }}" data-fancybox="gallery-img" data-caption="" href="{{ asset('storage/gallery-img/'.$image->image_path) }}">
-                        <img src="{{ asset('storage/gallery-img/'.$image->image_path) }}" alt="{{ $gallery_category->name }}" loading="lazy">
+                        <img src="{{ asset('storage/gallery-img/'.$image->image_path) }}" alt="{{ $gallery_category->name }}" loading="lazy"
+                        width="300" 
+                                 height="300">
                     </a>
                 </figure>
             </div>
