@@ -32,7 +32,7 @@ class FrontHomeController extends Controller
     }
     
     public function gallery(){
-        $data['gallery_category_list'] = GalleryCategory::orderBy('id','DESC')->get();
+        $data['gallery_category_list'] = GalleryCategory::orderBy('sort_order', 'ASC')->get();
 	    return view('frontend.pages.gallery', compact('data'));
     }
 

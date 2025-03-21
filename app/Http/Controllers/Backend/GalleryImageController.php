@@ -83,7 +83,7 @@ class GalleryImageController extends Controller
         $validator = Validator::make($request->all(), [
             'gallery_category' => 'required|exists:gallery_categories,id',
             'gallery_image_file' => 'required|array', 
-            'gallery_image_file.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:4096',
+            'gallery_image_file.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:10240',
         ]);
      
         if ($validator->fails()) {

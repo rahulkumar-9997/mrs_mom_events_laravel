@@ -56,6 +56,11 @@
 </section>
 @endsection
 @section('morescripts')
+<script src="{{asset('backend/assets/js/pages/sort-jquery-ui.min.js')}}" type="text/javascript"></script>
+<script>
+    var updateSortOrderUrl = "{{ route('gallery-category.updateSortOrder') }}";
+    var csrfToken = "{{ csrf_token() }}";
+</script>
 <script src="{{asset('backend/assets/plugins/datatables/js/jquery.dataTables.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('backend/assets/plugins/datatables/extensions/TableTools/js/dataTables.tableTools.min.js')}}" type="text/javascript"></script>
 <script src="{{asset('backend/assets/plugins/datatables/extensions/Responsive/js/dataTables.responsive.min.js')}}" type="text/javascript"></script>

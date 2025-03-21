@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
+
 class GalleryCategoryController extends Controller
 {
     /**
@@ -20,7 +21,7 @@ class GalleryCategoryController extends Controller
     public function index()
     {
         
-        $data['foundation_category_list'] = GalleryCategory::withCount('galleryImages')->orderBy('id','DESC')->get();
+        $data['foundation_category_list'] = GalleryCategory::withCount('galleryImages')->orderBy('sort_order', 'ASC')->get();
         return view('backend.manage-foundation-category.index', compact('data'));
     }
 
@@ -212,5 +213,13 @@ class GalleryCategoryController extends Controller
             return redirect()->back()->with('error', 'Something went wrong, please try again!');
         }
 
+    }
+
+    public function updateSortOrder(Request $request){
+        foreach ($request->sorted_ids as $index => $id) {
+            GalleryCategory::where('id', $id)->update(['sort_order' => $index + 1]);
+        }
+    
+        return response()->json(['status' => 'success', 'message' => 'Sort order updated successfully!']);
     }
 }

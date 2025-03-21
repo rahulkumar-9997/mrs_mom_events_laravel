@@ -159,4 +159,26 @@ $(document).ready(function () {
         });
      });
     /*Delete foundation category */
+    $("#sortable").sortable({
+        handle: ".handle",
+        update: function (event, ui) {
+            let sortedIDs = $("#sortable").sortable("toArray", { attribute: "data-id" });
+
+            $.ajax({
+                url: updateSortOrderUrl,
+                type: "POST",
+                data: {
+                    _token: csrfToken,
+                    sorted_ids: sortedIDs
+                },
+                success: function (response) {
+                    if (response.status === "success") {
+                        showSuccess(response.message);
+                    } else {
+                        showSuccess(response.message);
+                    }
+                }
+            });
+        }
+    });
 });
