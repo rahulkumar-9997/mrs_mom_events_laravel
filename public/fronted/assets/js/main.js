@@ -673,18 +673,16 @@ function startCountdown(targetDate, daysId, hoursId, minutesId, secondsId) {
       if (hoursElem) hoursElem.innerHTML = "00";
       if (minutesElem) minutesElem.innerHTML = "00";
       if (secondsElem) secondsElem.innerHTML = "00";
-      alert("Countdown Ended");
+      console.log("Countdown Ended");
     }
   }, 1000);
 }
 
 
-// Set event date: December 1, 2025, at 10:00 AM
-var targetDate = new Date("December 1, 2025 10:00:00").getTime();
-
+/* Set event date: December 30, 2025, at 10:00 AM */
+var targetDate = new Date("December 30, 2025 10:00:00").getTime();
 startCountdown(targetDate, "days", "hours", "minutes", "seconds");
 startCountdown(targetDate, "days1", "hours1", "minutes1", "seconds1");
-
 //========== GSAP AREA ============= //
 
 if ($('.text-anime-style-1').length) {

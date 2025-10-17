@@ -4,7 +4,6 @@
 <!-- @section('keywords', 'sharing, sharing text, text, sharing photo, photo,') -->
 @section('main-content')
 @include('frontend.layouts.banner-top')
-
 <!--===== ABOUT AREA STARTS =======-->
 <div class="about1-section-area sp1">
     <div class="container">
@@ -87,19 +86,6 @@
     </div>
 </div>
 <!--===== ABOUT AREA ENDS =======-->
-<div class="ninemonth-area nine-mo">
-    <div class="container">
-        <div class="row justify-content-center">
-             <div class="col-lg-5 col-md-5">
-                 <div class="position-relative">
-                    <img src="{{ asset('fronted/assets/mrs-mom-img/white.png') }}" 
-                        alt="9 Months Journey" 
-                        class="img-fluid rounded-3 heartbeat-img">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <div class="testimonials1-section-area sptwo">
     <!-- <div class="testimonial-img2">
         <img class="youtube-thumbnail" src="{{asset('fronted/assets/mrs-mom-img/director.webp')}}" alt="about us" loading="lazy"/>

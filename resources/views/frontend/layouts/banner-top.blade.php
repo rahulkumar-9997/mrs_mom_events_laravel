@@ -8,7 +8,7 @@
 			<div class="col-lg-6">
 				<div class="hero1-header heading1">
 					<h5 data-aos="fade-left" data-aos-duration="800">
-						Mrs MOM Event
+						Mrs MOM Event 2025
 					</h5>
 					<div class="space16"></div>
 					<h1 class="text-anime-style-3">
