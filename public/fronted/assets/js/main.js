@@ -680,7 +680,7 @@ function startCountdown(targetDate, daysId, hoursId, minutesId, secondsId) {
 
 
 /* Set event date: December 30, 2025, at 10:00 AM */
-var targetDate = new Date("December 30, 2025 10:00:00").getTime();
+var targetDate = new Date("November 30, 2025 10:00:00").getTime();
 startCountdown(targetDate, "days", "hours", "minutes", "seconds");
 startCountdown(targetDate, "days1", "hours1", "minutes1", "seconds1");
 //========== GSAP AREA ============= //

@@ -9,7 +9,7 @@
             <div class="col-lg-4 m-auto">
                 <div class="heading1 text-center">
                     <!-- <h1>Registration Open</h1> -->
-                    <h1>Coming Soon</h1>
+                    <h1>Registration</h1>
                     <!--<div class="breadcrub-a">
                         <a href="index.html">
                             Home
@@ -25,27 +25,23 @@
 <div class="registration-section-area sp1">
     <div class="container">
         <div class="row">
-            <!--<div class="col-lg-12" data-aos="fade-up" data-aos-duration="1000">
-                <div class="section-title text-center">
-                    <h2 class="registration_h2">This Year Mrs MOM is in 7 Cities</h2>
+            <div class="col-lg-12" data-aos="fade-up" data-aos-duration="1000">
+                <div class="section-title text-center mb-3">
+                    <h2 class="registration_h2">This Year in 3 Cities</h2>
                 </div>
-
-                <div class="border-section">
-                    <div class="boder-area">
-                        <span class="border-is">
-                        </span>
-                    </div>
+                <div class="cities-title heading2 text-center mb-1">                    
+                    <h5 data-aos="fade-left" data-aos-duration="800">Mumbai | Bangalore | Hyderabad</h5>
                 </div>
                 <div class="registration-button-wrapper">
                     <div class="registration-widget-container">
-                        <a class="registration-btn" href="https://forms.gle/i7uu1cxipvjEjdct7">
+                        <a class="registration-btn" href="https://forms.gle/JZmJ4PMVHzfrFEpw6" target="_blank">
                             <span class="registration-btn-content">
                                 Click here to Register
                             </span>
                         </a>
                     </div>
                 </div>
-            </div>-->
+            </div>
         </div>
     </div>
     <!--<div class="container">

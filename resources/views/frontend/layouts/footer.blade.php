@@ -1,4 +1,14 @@
 <!--===== CTA AREA STARTS =======-->
+@if (Route::currentRouteName() != 'registration')
+    @php
+		$className="footerWithouRegi";
+	@endphp
+@else
+    @php
+		$className="footerWithRegi";
+	@endphp
+@endif
+@if (Route::currentRouteName() != 'registration')
 <div class="cta1-section-area">
 	<div class="container">
 		<div class="row">
@@ -43,9 +53,10 @@
 		</div>
 	</div>
 </div>
+@endif
 <!--===== CTA AREA ENDS =======-->
 <!--===== FOOTER AREA STARTS =======-->
-<div class="footer1-sertion-area">
+<div class="footer1-sertion-area {{ $className }}">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-4 col-md-4">

@@ -4,7 +4,58 @@
 <!-- @section('keywords', 'sharing, sharing text, text, sharing photo, photo,') -->
 @section('main-content')
 @include('frontend.layouts.banner-top')
+<div class="three-cities-section" style="background-color: #eaeaea3b;">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="cities-title heading2 text-center mb-2">
+                    <h2 class="text-anime-style-3 mb-2">
+                        This Year in 3 Cities
+                    </h2>
+                    <h5 data-aos="fade-left" data-aos-duration="800">Mumbai | Bangalore | Hyderabad</h5>
+                    <div class="space16"></div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 mb-2 col30">
+                <div class="cities-line text-center">
+                    <div class="position-relative">
+                        <img src="{{ asset('fronted/assets/mrs-mom-img/mumbai.png') }}" 
+                            alt="mumbai" 
+                            class="img-fluid rounded-3 heartbeat-img">
+                    </div>
+                    <div class="cities-img-title">
+                        <h4>9<sup>th</sup> November</h4>
+                    </div>
+                </div>
 
+            </div>
+            <div class="col-lg-2 col-md-2 mb-2 col30">
+                <div class="cities-line text-center">
+                    <div class="position-relative">
+                        <img src="{{ asset('fronted/assets/mrs-mom-img/mumbai.png') }}" 
+                            alt="mumbai" 
+                            class="img-fluid rounded-3 heartbeat-img">
+                    </div>
+                    <div class="cities-img-title">
+                         <h4>16<sup>th</sup> November</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 mb-2 col30">
+                <div class="cities-line text-center">
+                    <div class="position-relative">
+                        <img src="{{ asset('fronted/assets/mrs-mom-img/mumbai.png') }}" 
+                            alt="mumbai" 
+                            class="img-fluid rounded-3 heartbeat-img">
+                    </div>
+                    <div class="cities-img-title">
+                         <h4>29<sup>th</sup> Nov – 7<sup>th</sup> <br>November</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!--===== ABOUT AREA STARTS =======-->
 <div class="about1-section-area sp1">
     <div class="container">
