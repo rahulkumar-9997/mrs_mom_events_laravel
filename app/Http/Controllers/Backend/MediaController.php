@@ -12,7 +12,8 @@ use Illuminate\Support\Facades\File;
 class MediaController extends Controller
 {
     public function index(){
-        $data['media_image_list'] = Media::orderBy('sort_order', 'asc')->get();
+        //$data['media_image_list'] = Media::orderBy('sort_order', 'asc')->paginate(50);
+        $data['media_image_list'] = Media::orderBy('id', 'desc')->paginate(50);
         return view('backend.manage-media.index' , compact('data'));
     }
 
@@ -42,6 +43,7 @@ class MediaController extends Controller
                 Media::create([
                     'is_image_or_youtube' => 1,
                     'youtube_link' => $request->youtube_link,
+                    'youtube_link_description' => $request->youtube_link_description,
                     'user_id' => $user_id,
                 ]);
                 
@@ -107,76 +109,70 @@ class MediaController extends Controller
     public function update(Request $request)
     {
         $user_id = Auth::id();
-        $isYouTube = $request->has('youtube_link_checkbox');
+        $isYouTube = $request->youtube_link_checkbox == 1;
         $this->validate($request, [
             'youtube_link' => $isYouTube ? 'required|url' : 'nullable',
-            'image_file' => !$isYouTube ? 'required|array' : 'nullable',
-            'image_file.*' => 'mimes:jpeg,png,jpg,webp', 
+            'youtube_link_description' => $isYouTube ? 'nullable|string|max:2000' : 'nullable',
+
+            'media_link' => !$isYouTube ? 'nullable|url' : 'nullable',
+            'media_link_description' => !$isYouTube ? 'nullable|string|max:2000' : 'nullable',
+            'media_caption' => !$isYouTube ? 'nullable|string|max:255' : 'nullable',
+            'media_caption_description' => !$isYouTube ? 'nullable|string|max:2000' : 'nullable',
+            'image_file' => 'nullable|mimes:jpeg,png,jpg,webp',
         ], [
             'youtube_link.required' => 'The YouTube link is required.',
             'youtube_link.url' => 'Please enter a valid YouTube URL.',
-            'image_file.required' => 'Please upload at least one image.',
-            'image_file.*.mimes' => 'Only JPEG, PNG, JPG, and WebP formats are allowed.',
+            'image_file.mimes' => 'Only JPEG, PNG, JPG, and WebP formats are allowed.',
         ]);
-        
 
         DB::beginTransaction();
         try {
             $media = Media::findOrFail($request->media_image_id_hidden);
-            
             if ($isYouTube) {
                 $media->update([
                     'is_image_or_youtube' => 1,
                     'youtube_link' => $request->youtube_link,
+                    'youtube_link_description' => $request->youtube_link_description,
+                    'title' => $request->media_caption ?? $media->title,
                 ]);
-            } else {
+
+            } 
+            else {
                 if ($request->hasFile('image_file')) {
                     if (!empty($media->media_image)) {
-                        $oldImagePath = public_path('storage/media-img/' . $media->media_image);
-                        if (File::exists($oldImagePath)) {
-                            File::delete($oldImagePath);
+                        $oldPath = public_path('storage/media-img/' . $media->media_image);
+                        if (File::exists($oldPath)) {
+                            File::delete($oldPath);
                         }
                     }
-                    $files = $request->file('image_file');
-                    if (!is_array($files)) {
-                        $files = [$files];
-                    }
-
-                    $mainPath = public_path('storage/media-img/');
-                    $uploadSuccess = false;
-
-                    foreach ($files as $file) {
-                        $uniqueTimestamp = uniqid() . '-' . round(microtime(true) * 1000);
-                        $image_file_name = 'dr-shilpi-reddy-hyd-' . $uniqueTimestamp . '.webp';
-
-                        Image::make($file->getRealPath())
-                            ->resize(600, 400, function ($constraint) {
-                                $constraint->aspectRatio();
-                                $constraint->upsize();
-                            })
-                            ->encode('webp', 70)
-                            ->save("{$mainPath}/{$image_file_name}");
-
-                        $media->update([
-                            'is_image_or_youtube' => 0,
-                            'media_image' => $image_file_name,
-                        ]);
-
-                        $uploadSuccess = true;
-                    }
-
-                    if (!$uploadSuccess) {
-                        throw new \Exception('Failed to upload media images.');
-                    }
+                    $file = $request->file('image_file');
+                    $uniqueTimestamp = uniqid() . '-' . round(microtime(true) * 1000);
+                    $image_file_name = 'dr-shilpi-reddy-hyd-' . $uniqueTimestamp . '.webp';
+                    Image::make($file->getRealPath())
+                        ->resize(600, 400, function ($constraint) {
+                            $constraint->aspectRatio();
+                            $constraint->upsize();
+                        })
+                        ->encode('webp', 70)
+                        ->save(public_path('storage/media-img/' . $image_file_name));
+                    $media->media_image = $image_file_name;
                 }
+                $media->update([
+                    'is_image_or_youtube' => 0,
+                    'media_image_link' => $request->media_link,
+                    'title' => $request->media_caption ?? $media->title,
+                    'media_link_description' => trim($request->media_caption_description),
+                ]);
             }
-
             DB::commit();
             return redirect('manage-media')->with('success', 'Media updated successfully.');
+
         } catch (\Exception $e) {
+
             DB::rollBack();
             Log::error('Media update error: ' . $e->getMessage());
-            return redirect()->back()->with('error', 'Failed to update media. ' . $e->getMessage());
+            return redirect()->back()
+                ->with('error', 'Failed to update media. ' . $e->getMessage());
         }
     }
 

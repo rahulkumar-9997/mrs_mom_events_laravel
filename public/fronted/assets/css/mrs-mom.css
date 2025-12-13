@@ -256,13 +256,51 @@
     border-radius: 8px;
     background: #F5F5F5;
 }
+.card-media{
+    box-shadow: rgb(159 8 128 / 15%) 0px 3px 8px;
+}
 .gallery-tab-widget img{
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     border-radius: 8px;
-    transition: all 0.4s;
+    transition: all 0.4s;   
+}
+.media-img-section{
+    /* border: 2px solid #0808081a; */
+    border-radius: 5px;
+}
+.media-caption-section{
+    border-top: 1px #dbd9d9 solid;
+    background-image: linear-gradient(87deg, rgb(159 8 128) 25%, #e8255f 100%);
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.media-caption-section h6{
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.media-caption-section{
+    padding: 10px 8px;
+}
+.media-img-section figure{
+    margin: 0 0 0 0;
+}
+.media-sect{
+    border: 2px solid #0808081a;
+    border-radius: 5px;
+}
+
+.yt-video-title .yt-title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: center;
+    color: var(--text-heading-color);
 }
 .section-title .registration_h2{
     color: #782185;
@@ -681,6 +719,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
 /*media query*/
 .slide-logos img{

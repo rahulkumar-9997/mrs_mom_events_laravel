@@ -35,6 +35,13 @@
                                         <div class="row de-flex justify-content-md-center">
                                         @foreach ($data['media_youtube_list'] as $youtube_link)
                                             <div class="col-lg-6">
+                                                @if($youtube_link->youtube_link_description)
+                                                    <div class="yt-video-title">
+                                                        <h5 class="yt-title">
+                                                            {{ $youtube_link->youtube_link_description }}
+                                                        </h5>
+                                                    </div>
+                                                @endif
                                                 <div class="media-youtube-section">
                                                     <div class="media-youtube">
                                                         <iframe class="media-frame" 
@@ -59,14 +66,52 @@
                                 <div class="media-multiple-img">
                                     <div class="row grid-services">
                                         @foreach ($data['media_image_list'] as $media)
-                                            <div class="col-lg-3 col-md-6 px-1">
-                                                <figure>
-                                                    <a class="lightbox" title="{{ $media->title }}" data-fancybox="media-img" data-caption="{{ $media->title }}" href="{{ asset('storage/media-img/' . $media->media_image) }}">
-                                                        <img src="{{ asset('storage/media-img/' . $media->media_image) }}" alt="{{ $media->title }}" loading="lazy">
-                                                    </a>
-                                                </figure>
+                                            <div class="col-lg-3 col-md-6 px-2 mb-2">
+                                                <div class="media-img-section card-media media-sect">
+                                                    <figure>
+                                                        @if($media->media_image_link)
+                                                            <a class="lightbox"
+                                                            href="{{ $media->media_image_link }}"
+                                                            target="_blank"
+                                                            title="{{ $media->title }}">
+                                                        @else
+                                                            <a class="lightbox"
+                                                            data-fancybox="media-img"
+                                                            data-caption="
+                                                            <div class='fancybox-caption-custom text-center'>
+                                                                @if($media->title)
+                                                                    <h4>{{ e($media->title) }}</h4>
+                                                                @endif
+                                                                @if($media->media_link_description)
+                                                                    <p>{{ e($media->media_link_description) }}</p>
+                                                                @endif
+                                                            </div>
+                                                            "
+                                                            href="{{ asset('storage/media-img/' . $media->media_image) }}"
+                                                            title="{{ $media->title }}">
+                                                        @endif
+
+                                                            <img
+                                                                src="{{ asset('storage/media-img/' . $media->media_image) }}"
+                                                                alt="{{ $media->title }}"
+                                                                loading="lazy">
+                                                        </a>
+                                                    </figure>
+                                                    @if($media->title || $media->media_link_description)
+                                                        <div class="media-caption-section text-center">
+                                                            @if($media->title)
+                                                                <h6>{{ $media->title }}</h6>
+                                                            @endif
+
+                                                            @if($media->media_link_description)
+                                                                <p>{{ $media->media_link_description }}</p>
+                                                            @endif
+                                                        </div>
+                                                    @endif
+                                                </div>
                                             </div>
-                                        @endforeach
+                                            @endforeach
+
                                     </div>
                                 </div>
                                 <div class="space30"></div>
