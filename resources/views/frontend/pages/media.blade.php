@@ -64,7 +64,7 @@
                             @endif
                             @if (isset($data['media_image_list']) && $data['media_image_list']->count() > 0)
                                 <div class="media-multiple-img">
-                                    <div class="row grid-services">
+                                    <div class="row grid-services-media">
                                         @foreach ($data['media_image_list'] as $media)
                                             <div class="col-lg-3 col-md-6 px-2 mb-2">
                                                 <div class="media-img-section card-media media-sect">
@@ -158,3 +158,6 @@
 </div>
 <!--===== EVENT AREA ENDS =======-->
 @endsection
+@push('scripts')
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+@endpush

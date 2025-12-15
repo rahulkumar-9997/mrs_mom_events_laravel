@@ -2,25 +2,27 @@
 
   $(document).ready(function () {
     /*auto size image */
-    $(window).on('load', function () {
-      var $container = $('.grid-services');
-      $container.isotope({
-        filter: '*',
-      });
-      $('.portfolio_filter a').on('click', function () {
-        $('.portfolio_filter .active').removeClass('active');
-        $(this).addClass('active');
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-          filter: selector,
-          animationOptions: {
-            duration: 500,
-            animationEngine: "jquery"
-          }
-        });
-        return false;
-      });
-    });
+    function initIsotopeOtherMedia() {
+      var $container = $(".grid-services-media");
+        if ($container.length) {
+          $container.imagesLoaded(function() {
+              $container.isotope({
+                  itemSelector: ".col-lg-3",
+                  layoutMode: "masonry",
+                  percentPosition: true
+              });
+
+              setTimeout(function () {
+                  $container.isotope("layout");
+              }, 500);
+          });
+      }
+  }
+
+  $(window).on("load", function () {
+      initIsotopeOtherMedia();
+  });
+
     /*auto size image */
     //========== HEADER ACTIVE STRATS ============= //
     if ($("#header").length > 0) {
